@@ -113,11 +113,11 @@
                               <br>
                               <div class="form-group col-md-2">
                                 <label for="cpf">CNPJ</label>
-                                <input type="number" class="form-control" id="nomeCliente" required>
+                                <input type="number" pattern=".{6,}" class="form-control" id="nomeCliente" required>
                               </div>
                           <div class="form-group col-md-10">
                             <label for="nomeCliente">Nome</label>
-                            <input type="text" class="form-control" id="nomeCliente" required minlength="3" maxlength="50">
+                            <input type="text" pattern=".{6,}" class="form-control" id="nomeCliente" required minlength="3" maxlength="50">
                           </div>
                             <div class="form-group col-md-2">
                               <label for="telefone">Telefone</label>
