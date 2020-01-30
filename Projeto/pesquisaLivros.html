@@ -1,0 +1,171 @@
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+        <style>
+           body {
+                background-color: lightsteelblue;
+            }
+            pesquisa {
+                margin-right: 200px;
+            }
+    
+        </style>
+           <script src="https://kit.fontawesome.com/0c5954c937.js" crossorigin="anonymous"></script>
+        <img src="img/vinabook.jpg" width="11%" align="left">
+        <br>
+        <div class="container">
+          <div class="card my-4">
+            <h5 class="card-header">O que você deseja?</h5>
+            <div class="card-body">
+              <div class="input-group" width="10%">
+                <input type="text" class="form-control" placeholder="Busque seu livro">
+                <span class="input-group-btn">
+                  <button class="btn btn-outline-success my-1 my-sm-1" type="button" href="pesquisaLivros.html"><i class="fas fa-search"></i></button>
+                </span>
+              </div>
+            </div>
+          </div>
+            </div> 
+            <br>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.html" align="left">Vinabook</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                          <a class="nav-link" href="carrinho.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 Área do Administrador
+                                </a>
+                                <div class="dropdown-menu">
+                                      <form class="px-4 py-3">
+                                        <div class="form-group">
+                                          <label for="email">Email</label>
+                                          <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="senha">Senha</label>
+                                          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
+                                        </div>
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                          <label class="form-check-label" for="dropdownCheck">
+                                            Lembre-me
+                                          </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                      </form>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="adm.html">Não possui cadastro? Cadastre-se</a>
+                                      <a class="dropdown-item" href="#">Esqueceu a senha?</a>
+                                    </div>
+                              </li>
+    <li class="nav-item active dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Entre ou cadastre-se
+                          </a>
+                                <div class="dropdown-menu">
+                                        <form class="px-4 py-3">
+                                          <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="senha">Senha</label>
+                                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
+                                          </div>
+                                          <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                            <label class="form-check-label" for="dropdownCheck">
+                                              Lembre-me
+                                            </label>
+                                          </div>
+                                          <button type="submit" class="btn btn-primary">Sign in</button>
+                                        </form>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="cadastroCliente.html">Não possui cadastro? Cadastre-se</a>
+                                        <a class="dropdown-item" href="#">Esqueceu a senha?</a>
+                                      </div>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Categorias
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                              <a class="dropdown-item" href="pesquisaLivros.html">Literatura</a>
+                              <a class="dropdown-item" href="pesquisaLivros.html">HQ's</a>
+                              <a class="dropdown-item" href="pesquisaLivros.html">Didáticos</a>
+                              <a class="dropdown-item" href="pesquisaLivros.html">Administração</a>
+                              <a class="dropdown-item" href="pesquisaLivros.html">Auto Ajuda</a>
+                              <a class="dropdown-item" href="pesquisaLivros.html">Religião</a>
+                              <a class="dropdown-item" href="pesquisaLivros.html">Economia  </a>
+                            </div>
+                          </li>
+
+                        </div>
+                      </nav>
+                      </ul>
+                    </div>
+                </nav>
+    
+    </head>
+
+
+
+<body>
+    <br>
+<div class="container">
+<table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Livros</th>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Preço</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>O Último Desejo - The Witcher - Vol. 1 - Capa Game</td>
+            <td>Sapkowski,Andrzej</td>
+            <td>R$ 33,43</td>
+            <td><i class="fas fa-plus-square"></td>
+            <td><i class="fas fa-shopping-cart"></i></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>A Espada Do Destino - The Witcher - Vol. 2 - Capa Game</td>
+            <td>Sapkowski,Andrzej</td>
+            <td>R$ 33,43</td>
+            <td><i class="fas fa-plus-square"></i></td>
+            <td><i class="fas fa-shopping-cart"></i></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>O Sangue Dos Elfos - The Witcher - Vol.3 - Capa Game</td>
+            <td>Sapkowski,Andrzej</td>
+            <td>R$ 33,43</td>
+            <td><i class="fas fa-plus-square"></td>
+                <td><i class="fas fa-shopping-cart"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </body>
+
+    <footer class="py-3 bg-dark fixed-bottom"> 
+            <div class="container">
+              <p class="m-0 text-center text-white">Copyright &copy; Vinabook 2020</p>
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </body>
+        </html>

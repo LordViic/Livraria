@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+        <style>
+           body {
+                background-color: lightsteelblue;
+            }
+        </style>
+        <script type="text/javascript" >
+    
+            function limpa_formulário_cep() {
+  
+                    document.getElementById('rua').value=("");
+                    document.getElementById('bairro').value=("");
+                    document.getElementById('cidade').value=("");
+                    document.getElementById('uf').value=("");
+            }
+        
+            function meu_callback(conteudo) {
+                if (!("erro" in conteudo)) {
+        
+                    document.getElementById('rua').value=(conteudo.logradouro);
+                    document.getElementById('bairro').value=(conteudo.bairro);
+                    document.getElementById('cidade').value=(conteudo.localidade);
+                    document.getElementById('uf').value=(conteudo.uf);
+                } 
+                else {
+                
+                    limpa_formulário_cep();
+                    alert("CEP não encontrado.");
+                }
+            }
+                
+            function pesquisacep(valor) {
+        
+
+                var cep = valor.replace(/\D/g, '');
+
+                if (cep != "") {
+        
+
+                    var validacep = /^[0-9]{8}$/;
+        
+                    if(validacep.test(cep)) {
+
+                        document.getElementById('rua').value="...";
+                        document.getElementById('bairro').value="...";
+                        document.getElementById('cidade').value="...";
+                        document.getElementById('uf').value="...";
+        
+      
+                        var script = document.createElement('script');
+        
+              
+                        script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+        
+   
+                        document.body.appendChild(script);
+        
+                    } 
+                    else {
+                      
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } 
+                else {
+         
+                    limpa_formulário_cep();
+                }
+            };
+        
+            </script>
+           <script src="https://kit.fontawesome.com/0c5954c937.js" crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html" align="left">Administração</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="cadastroLivros.html">Cadastro Livros</a>
+            </li>
+            <li class="nav-item ">
+                    <a class="nav-link" href="cadastroAutores.html">Cadastro Autores</a>
+                  </li>
+                  <li class="nav-item ">
+                        <a class="nav-link" href="cadastroEditoras.html">Cadastro Editoras</a>
+                      </li>
+                <li class="nav-item ">
+                            <a class="nav-link" href="listaCliente.html">Lista Clientes</a>
+            </li>
+            <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Sair</a>
+    </li>
+            </div>
+          </nav>
+          </ul>
+        </div>
+    </nav>
+    </head>
+
+    <body>
+            <img src="img/usuario.png" width="11%" align="left">
+            <div class="container">
+                    <form>
+                            <fieldset class="col-md-12">
+                              <div class="form-row">
+                              <legend align="center">Cadastro de Editoras</legend>
+                              <br>
+                              <div class="form-group col-md-2">
+                                <label for="cpf">CNPJ</label>
+                                <input type="number" class="form-control" id="nomeCliente" required>
+                              </div>
+                          <div class="form-group col-md-10">
+                            <label for="nomeCliente">Nome</label>
+                            <input type="text" class="form-control" id="nomeCliente" required minlength="3" maxlength="50">
+                          </div>
+                            <div class="form-group col-md-2">
+                              <label for="telefone">Telefone</label>
+                              <input type="tel" class="form-control" id="telefone" required>
+                              </div>
+                            <br>
+                            <form method="get" action=".">
+                                  <div class="form-group col-md-2">
+                                  <label for="cep">CEP:</label>
+                                  <input name="cep" type="text" id="cep" value="" class="form-control"
+                                         onblur="pesquisacep(this.value);" required>
+                                        </div>
+                                         <div class="form-group col-md-10">
+                                  <label for="rua">Logradouro</label>
+                                  <input name="rua" type="text" id="rua" class="form-control" required>
+                                </div>
+                                  <div class="form-group col-md-2">
+                                  <label for="bairro">Bairro:</label>
+                                  <input name="bairro" type="text" id="bairro" class="form-control" required>
+                                </div>
+                                  <div class="form-group col-md-2">
+                                  <label for="cidade">Cidade:</label> 
+                                  <input name="cidade" type="text" id="cidade" class="form-control" required>
+                                </div>
+                                  <div class="form-group col-md-1">
+                                  <label for="uf">Estado:</label>
+                                  <input name="uf" type="text" id="uf" class="form-control" required>
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="numero">Número</label>
+                                    <input name="numero" type="text" id="numero" class="form-control">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                      <label for="complemento">Complemento</label>
+                                      <input name="complemento" type="text" id="complemento" class="form-control" >
+                                    </div>
+                                  </div>
+                                  </fieldset>
+                                </form>
+                                <br>
+                          <button type="submit" href="index.html" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
+                          <button type="reset" class="btn btn-outline-success my-2 my-sm-0">Limpar</button>
+                      </div>
+                        </form>
+    </body>
+    <footer class="py-3 bg-dark fixed-bottom" >
+            <div class="container">
+              <p class="m-0 text-center text-white">Copyright &copy; Vinabook 2020</p>
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </html>
