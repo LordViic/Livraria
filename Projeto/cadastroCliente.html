@@ -207,6 +207,21 @@
                         <label for="email">E-mail</label>
                         <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="email" required>
                       </div>
+                      <div class="form-group col-md-11">
+                            <label for="forma">Forma de Pagamento</label>
+                            <div class="custom-control custom-radio">
+                                    <input type="radio" id="formaboleto" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="formaboleto"> <i class="far fa-money-bill-alt"></i>Boleto</label>
+                                  </div>
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" id="paypal" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="paypal"><i class="fab fa-cc-paypal"></i> Paypal</label>
+                                  </div>
+                                  <div class="custom-control custom-radio">
+                                        <input type="radio" id="paypal" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="paypal"><i class="far fa-credit-card"></i> Cartão de Crédito</label>
+                                      </div>
+                          </div>
  
                       <br>
                       <form method="get" action=".">
@@ -242,21 +257,6 @@
                             </div>
                             </fieldset>
                           </form>
-                          <div class="form-group col-md-8">
-                                <label for="forma">Forma de Pagamento</label>
-                                <div class="custom-control custom-radio">
-                                        <input type="radio" id="formaboleto" name="customRadio" class="custom-control-input">
-                                        <label class="custom-control-label" for="formaboleto"> <i class="far fa-money-bill-alt"></i>Boleto</label>
-                                      </div>
-                                      <div class="custom-control custom-radio">
-                                        <input type="radio" id="paypal" name="customRadio" class="custom-control-input">
-                                        <label class="custom-control-label" for="paypal"><i class="fab fa-cc-paypal"></i> Paypal</label>
-                                      </div>
-                                      <div class="custom-control custom-radio">
-                                            <input type="radio" id="paypal" name="customRadio" class="custom-control-input">
-                                            <label class="custom-control-label" for="paypal"><i class="far fa-credit-card"></i> Cartão de Crédito</label>
-                                          </div>
-                              </div>
                           </form>
                           <br>
                     <button type="submit" href="index.html" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
